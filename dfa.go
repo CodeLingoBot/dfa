@@ -28,7 +28,7 @@ func NewDFA(initState int, isFinal bool) *DFA {
 	return retDFA
 }
 
-//Add new state in this DFA
+//AddState adds new state in this DFA
 func (d *DFA) AddState(state int, isFinal bool) {
 	if state == -1 {
 		fmt.Println("Cannot add state as -1, it is dead state")
@@ -41,7 +41,7 @@ func (d *DFA) AddState(state int, isFinal bool) {
 	}
 }
 
-//Add new transition function into DFA
+//AddTransition adds new transition function into DFA
 func (d *DFA) AddTransition(srcState int, input string, dstStateint int) {
 	find := false
 
